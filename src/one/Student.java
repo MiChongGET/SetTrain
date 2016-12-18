@@ -42,12 +42,15 @@ public class Student {
 
     @Override
     public int hashCode() {
-        return 0;//强制所有的hashCode都变为0
+        //return 0;//强制所有的hashCode都变为0
+        return this.name.hashCode()+this.age*21;
+        //为了防止数值加在一起重复，所以age乘以一个数
     }
 
     //重写equals方法
     @Override
     public boolean equals(Object obj) {
+        System.out.println(obj);
     if (this==obj)
         return true;
 
